@@ -1,0 +1,49 @@
+
+
+<ion-content style="color: aquamarine;">
+  <ion-card class="welcome-card" style="border-radius: 10px; ">
+    <form name="form">
+      <ion-grid >
+        <ion-row class="ion-justify-content-center">
+          <ion-col class="ion-align-self-center" size-md="6" size-lg="6" size-xs="12">
+            <h1 class="ion-text-center" style="padding-top:90px; text-emphasis: size 1em;">Créez un compte</h1>
+            <div style="margin-left: 15px; margin-right: 15px;">
+
+              <ion-item>
+                <ion-label position="floating">Nom</ion-label>
+                <ion-input [(ngModel)]="nom" name="nom" type="text" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Prénom(s)</ion-label>
+                <ion-input  [(ngModel)]="prenom" name="prenom" type="text" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input [(ngModel)]="email" name="email" [email]="true" type="email" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Mot de passe</ion-label>
+                <ion-input [(ngModel)]="mdp" name="mdp" type="password" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Confirmer mot de passe</ion-label>
+                <ion-input [(ngModel)]="mdpConfirm" name="mdpConfirm" type="password" required></ion-input>
+              </ion-item>
+
+              <div class="ion-padding">
+                <ion-button type="submit" expand="block" (click)="register()" >S'inscrire</ion-button>
+                <ion-button type="submit" expand="block" fill="outline" (click)="goOnLogin()" >Se connecter</ion-button>
+              </div>
+
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-card>
+
+</ion-content>

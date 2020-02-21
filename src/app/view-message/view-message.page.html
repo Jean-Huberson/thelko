@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button color="primary"></ion-menu-button>
+      </ion-buttons>
+    <ion-title color="primary">ThelkoApp </ion-title>
+  </ion-toolbar>
+
+  <ion-segment scrollable>
+      <ion-segment-button>
+        <ion-icon name="md-help-buoy" (click)="reviewService()" class="icon-tabs-review"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button (click)="viewStatistic()">
+          <ion-icon name="pulse" class="icon-tabs-review"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button>
+        <ion-icon name="chatbubbles" (click)="messageBox()" selected class="icon-tabs-review"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button>
+          <ion-icon name="md-more" (click)="viewMore()"  class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+<div class="chat-messages">
+  <div class="chat">
+    <div class="chat-content clearfix">
+      <span class="friend last">
+        Salut, comment vas tu?
+        <span class="time">
+          15h30
+        </span>
+      </span>
+
+      <span class="you first">
+        Je vais bien. etoi ?
+        <span class="time">
+          16h30
+        </span>
+      </span>
+
+      <span class="you last">
+        blabla
+        <span class="time">
+          16h40
+        </span>
+      </span>
+    </div>
+    
+  </div>
+</div>
+</ion-content>
+
+<ion-footer>
+  <div class="msg-box">
+      <ion-input type="text" class="ip-msg" placeholder="Répondre" name="" id=""></ion-input>
+      <ion-fab vertical="center"  horizontal="end"  style="padding-top:-8px;" slot="fixed">
+        <ion-fab-button size="small" class="btn-group">
+            <ion-icon name="paper-plane" class="fa fa-paper-plane"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+</ion-footer>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary"></ion-menu-button>
+      <ion-title color="primary">ThelkoApp</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+      <ion-searchbar search-icon="search" spellcheck="true" animated="true" autocorrect="on" color="light" type="search" inputmode="search" autocomplete="on" showCancelButton="focus" style="color: grey;" placeholder="Rechercher un service"></ion-searchbar>
+  </div>
+  
+  <div>
+    <ion-card (click)="goToReview(produitItems.idProduits, produitItems.nomProduits, nbreComent, commentaireItems, voteItems)">
+      <ion-card-header>
+        <ion-card-subtitle>Veuillez séléctionnez un service</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label>{{produitItems.nomProduits}}
+            <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+            <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+            <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+            <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+            <ion-icon name="star" fill="outline" style="color:chocolate" slot="start"></ion-icon>
+          </ion-label>
+          <p style="color:gray; margin-right:30px;">{{nbreComent}} avis</p>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  
+  
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button color="primary"></ion-menu-button>
+        <ion-title color="primary">ThelkoApp</ion-title>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div>
+        <ion-searchbar search-icon="search" spellcheck="true" animated="true" [(ngModel)]="searchTerm" (ionChange)="filteredItems(searchTerm)" autocorrect="on" color="light" type="search" inputmode="search" autocomplete="on" showCancelButton="focus" style="color: grey;" placeholder="Rechercher une entreprise"></ion-searchbar>
+    </div>
+    
+    <div>
+      <ion-list lines="none" *ngIf="items.length > 0; else message">
+        <ion-item *ngFor="let item of items">
+          <ion-label (click)="goToService(item.idEntreprises ,item.nomEntreprise)">{{item.nomEntreprise}}</ion-label>
+        </ion-item>
+      </ion-list>
+      <div>
+        <ng-template #message style="margin-top:150px;"><p style="text-align: center; text-align:center; color: grey;">Aucune disponible!</p> </ng-template>
+      </div>
+    </div>
+
+  </ion-content>
+
+  
+  

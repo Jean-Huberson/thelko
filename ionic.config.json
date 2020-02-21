@@ -1,5 +1,8 @@
 {
   "name": "thelko",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

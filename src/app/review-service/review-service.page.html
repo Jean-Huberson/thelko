@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button color="primary"></ion-menu-button>
+      </ion-buttons>
+    <ion-title color="primary">ThelkoApp </ion-title>
+  </ion-toolbar>
+
+  <ion-segment scrollable>
+      <ion-segment-button>
+        <ion-icon name="md-help-buoy" (click)="reviewService()" class="icon-tabs-review"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button (click)="viewStatistic()">
+          <ion-icon name="pulse" class="icon-tabs-review"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button>
+        <ion-icon name="chatbubbles" (click)="messageBox()" class="icon-tabs-review"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button>
+          <ion-icon name="md-more" (click)="viewMore()" class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card class="welcome-card">
+      <img src="/assets/shapes.svg" alt=""/>
+      <ion-card-header>
+        <ion-card-subtitle>Entreprise</ion-card-subtitle>
+        <ion-card-title>{{nomEntp}} </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p> Avis {{nbreCment}}- Moyen</p>
+      </ion-card-content>
+  </ion-card>
+    
+
+  
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>{{nomEntp}}
+        <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+        <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+        <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+        <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+        <ion-icon name="star" fill="outline" style="color:chocolate" slot="start"></ion-icon>
+      </ion-label>
+      <ion-button fill="outline" slot="end">Noter</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      {{nomEntp}} est une entreprise basée dans le domaine de ${{nomSecteur}}.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Statisics du 28 Janvier au 28 Février | 2019</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+        <ion-label>Excellent 0 %</ion-label>
+        <ion-progress-bar color="primary" value="0" style="margin-bottom:5px; height: 15px;"></ion-progress-bar>
+
+        <ion-label>Bien 0 %</ion-label>
+        <ion-progress-bar color="success" value="0" style="margin-bottom:5px; height: 15px;"></ion-progress-bar>
+
+        <ion-label>Moyen 0 %</ion-label>
+        <ion-progress-bar color="warning" value="0" style="margin-bottom:5px; height: 15px;"></ion-progress-bar>
+
+        <ion-label>Bas 0 %</ion-label>
+        <ion-progress-bar color="danger" value="0"  style="margin-bottom:5px; height: 15px;"></ion-progress-bar>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="newMessage()">
+        <ion-icon name="color-filter"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+

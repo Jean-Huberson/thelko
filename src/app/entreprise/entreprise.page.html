@@ -1,0 +1,168 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="primary"></ion-menu-button>
+        </ion-buttons>
+      <ion-title color="primary">Jumia Review </ion-title>
+    </ion-toolbar>
+
+    <ion-segment scrollable>
+        <ion-segment-button indicator-color-checked="light" checked>
+          <ion-icon name="home" class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button checked="true">
+          <ion-icon name="heart" class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="pin" class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="star" class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="call" class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="globe" class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="basket" class="icon-tabs-review"></ion-icon>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+  
+<ion-content>
+
+  <ion-card style="height:250px;"> 
+    <div style="margin-top:30px; margin-left: 20px;">
+      <ion-grid>
+          <ion-row>
+            <ion-col class="ion-align-items-start">
+                <ion-thumbnail style="height:70px; width:30%">
+                    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                </ion-thumbnail>
+            </ion-col>
+  
+            <ion-col class="align-items-end">
+              JUMIA
+            </ion-col>
+  
+          </ion-row>
+      </ion-grid>
+      
+        
+    </div>
+  
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Liste des entreprises</ion-card-subtitle>
+      <ion-card-title>Choisissez une entreprise</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-list>
+          <ion-radio-group>
+              <ion-item>
+                  <ion-label>Jumia</ion-label>
+                  <ion-radio [(ngModel)]="popi" name="radio"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>Alibaba</ion-label>
+                  <ion-radio [(ngModel)]="saus" name="radio" style="border-radius: 15px;" position="start"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>Ivoir-Boutique</ion-label>
+                  <ion-radio [(ngModel)]="mush" name="radio"></ion-radio>
+                </ion-item>
+          </ion-radio-group>
+        </ion-list>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>JUMIA CI 
+        <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+        <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+        <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+        <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+        <ion-icon name="star" fill="outline" style="color:chocolate" slot="start"></ion-icon>
+      </ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item href="#" class="activated">
+      <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-label>Jumia food
+        <ion-row>
+          <ion-col size-md ="8" size-xs="8" size-sm="10" size-lg="10">
+              <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+              <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+              <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+              <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+              <ion-icon name="star" fill="outline" style="color:chocolate" slot="start"></ion-icon>
+          </ion-col>
+          <ion-col size-md="4" size-xs="4" size-sm="2" size-lg="2">
+              <div style="color: darkgrey;">2 avis</div>
+          </ion-col>
+        </ion-row>
+          
+      </ion-label>
+    </ion-item>
+  
+    <ion-item href="#">
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Jumia deals
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" fill="outline" style="color:chocolate" slot="start"></ion-icon>
+      </ion-label>
+    </ion-item>
+  
+    <ion-item class="activated">
+      <ion-icon name="warning" slot="start"></ion-icon>
+      <ion-label>Jumia transport
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" fill="outline" style="color:chocolate" slot="start"></ion-icon>
+      </ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>Jumia divertissement
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" style="color:chocolate" slot="start"></ion-icon>
+          <ion-icon name="star" fill="outline" style="color:chocolate" slot="start"></ion-icon>
+          
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+        <ion-icon name="arrow-dropright"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>
+  
